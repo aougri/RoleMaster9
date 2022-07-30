@@ -1,3 +1,5 @@
+package bot;
+
 import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
 import org.javacord.api.entity.message.Message;
@@ -9,11 +11,12 @@ import java.util.Optional;
 
 public class Main{
     public static void main(String[] args) {
-        final String token = "MTAwMjA2NTUxNDcxOTM1MDgyNA.GzmHAW.nCWR5mZCBwfW0NXz5AiqW2DrAne0RU6-uY22Pc";
+        final String token = "";
         DiscordApi api = new DiscordApiBuilder()
                 .setToken(token)
                 .login().join();
 
+        System.out.println("Bot is working and on" + " "+ api.createBotInvite());
 
         api.addMessageCreateListener(event -> {
             Message message = event.getMessage();
@@ -27,6 +30,8 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+
                     }
                 }
             }
@@ -46,6 +51,8 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+
                     }
                 }
             }
@@ -64,6 +71,8 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+
                     }
                 }
             }
@@ -82,6 +91,8 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+
                     }
                 }
             }
@@ -492,7 +503,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001540195847524422");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -510,7 +521,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001540195168030720");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -528,7 +539,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001540195931410432");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -546,7 +557,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001545688598991020");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -564,7 +575,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001545690817765448");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -582,7 +593,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001545692000571603");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -600,7 +611,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001545693317578922");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -618,7 +629,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001545693657309244");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -636,7 +647,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001545695179841617");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -654,7 +665,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001545695616045230");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -672,7 +683,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001545696782078023");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -690,7 +701,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001545696782078023");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -708,7 +719,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001545697537052812");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -726,7 +737,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001545698262651041");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -744,7 +755,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001545699470622750");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -762,7 +773,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001545700229791784");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -780,7 +791,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001545700900880447");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -798,7 +809,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001545701718773770");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -816,7 +827,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001545702394056724");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -834,7 +845,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001545703283236925");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -852,7 +863,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001545703421644920");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -870,7 +881,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001545704084340786");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -888,7 +899,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546892708159549");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -906,7 +917,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546893282787348");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -924,7 +935,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546894146797599");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -942,7 +953,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546895090532362");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -960,7 +971,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546896650809426");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -978,7 +989,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546897628078091");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -996,7 +1007,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546898068480060");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1014,7 +1025,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546899385495634");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1032,7 +1043,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546899884621897");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1050,7 +1061,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546900295647375");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1068,7 +1079,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546900484411404");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1086,7 +1097,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546901658812557");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1104,7 +1115,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546903021944862");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1122,7 +1133,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546903760162986");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1140,7 +1151,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546904380903515");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1158,7 +1169,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546905228161094");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1176,7 +1187,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546906062831636");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1194,7 +1205,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546906444513282");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1212,7 +1223,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546907669250209");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1230,7 +1241,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546908369682533");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1248,7 +1259,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546909342773328");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1266,7 +1277,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001546913541263521");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1284,7 +1295,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553338288062495");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1302,7 +1313,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553338904612994");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1320,7 +1331,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553340783677630");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1338,7 +1349,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553341572186142");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1356,7 +1367,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553343103115385");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1374,7 +1385,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553343245721650");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1392,7 +1403,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553345082826812");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1410,7 +1421,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553345275772938");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1428,7 +1439,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553346408239215");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1446,7 +1457,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553347108667412");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1464,7 +1475,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553347272249496");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1482,7 +1493,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553348740259930");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1500,7 +1511,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553349742702693");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1518,7 +1529,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553349767864400");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1536,7 +1547,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553351068090479");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1554,7 +1565,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553351810498650");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1572,7 +1583,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553352565477376");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1590,7 +1601,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553353463050271");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1608,7 +1619,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553355027513355");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1626,7 +1637,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553355702812773");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1644,7 +1655,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553356768157787");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1662,7 +1673,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553356852052020");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1680,7 +1691,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553358278103141");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1698,7 +1709,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553359112777839");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1716,7 +1727,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001553363051237467");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1734,7 +1745,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554919322562721");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1752,7 +1763,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554920094314547");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1770,7 +1781,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554919322562721");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1781,22 +1792,6 @@ public class Main{
         });
 
 
-        api.addMessageCreateListener(event -> {
-            Message message = event.getMessage();
-            if (message.getContent().equalsIgnoreCase("rm!role HU")) {
-                if (event.getServer().isPresent()) {
-                    Server server = event.getServer().get();
-
-                    Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
-
-
-                    if (role.isPresent() && author.isPresent()) {
-                        server.addRoleToUser(author.get(), role.get()).join();
-                    }
-                }
-            }
-        });
 
 
         api.addMessageCreateListener(event -> {
@@ -1806,7 +1801,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554921658781737");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1824,7 +1819,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554922048864436");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1842,7 +1837,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554923835621448");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1860,7 +1855,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554923961454602");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1878,7 +1873,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554924900995206");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1896,7 +1891,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554925035204718");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1914,7 +1909,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554925865672876");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1932,7 +1927,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554927488868364");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1950,7 +1945,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554928910737541");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1968,7 +1963,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554928910737541");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -1986,7 +1981,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554929690882149");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2004,7 +1999,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554930831740939");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2022,7 +2017,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554931163074762");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2040,7 +2035,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554931704139986");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2058,7 +2053,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554932761112616");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2076,7 +2071,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554933692244008");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2094,7 +2089,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554933692244008");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2112,7 +2107,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554933792907265");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2130,7 +2125,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554934644363476");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2148,7 +2143,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554935932002305");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2166,7 +2161,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554936418533507");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2184,7 +2179,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554937295147120");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2202,7 +2197,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554937924288532");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2220,7 +2215,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554938826084422");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2238,7 +2233,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554939589447700");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2256,7 +2251,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554940621234248");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2274,7 +2269,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554940860313611");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2292,7 +2287,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001554941091008594");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2310,7 +2305,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556444509896794");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2328,7 +2323,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556445319401502");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2346,7 +2341,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556446309265529");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2364,7 +2359,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556447039082607");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2382,7 +2377,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556448087654420");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2400,7 +2395,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556448905531422");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2418,7 +2413,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556449136226334");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2436,7 +2431,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556450813943900");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2454,7 +2449,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556449157206157");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2472,7 +2467,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556450339979314");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2490,7 +2485,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556453733183699");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2508,7 +2503,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556454442008657");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2526,7 +2521,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556455729668106");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2544,7 +2539,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556456778244106");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2562,7 +2557,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556458611155024");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2580,7 +2575,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556460095930378");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2598,7 +2593,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556461127737364");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2616,7 +2611,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556462180515840");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2634,7 +2629,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556462243434546");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2652,7 +2647,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556463124238466");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2670,7 +2665,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556465208791163");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2688,7 +2683,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556466433536010");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2706,7 +2701,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556466798448790");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2724,7 +2719,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556467851198524");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2742,7 +2737,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556468903981077");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2760,7 +2755,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556469847691336");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2778,7 +2773,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556471470899270");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2796,7 +2791,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556471487660052");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2814,7 +2809,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556472586571776");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2832,7 +2827,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556473882607696");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2850,7 +2845,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556473945542788");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2868,7 +2863,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556476084621369");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2886,7 +2881,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556477389066260");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2904,7 +2899,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556477544251495");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2922,7 +2917,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556478894800903");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2940,7 +2935,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556479314247740");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2958,7 +2953,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556480044052591");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2976,7 +2971,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556481855991829");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -2994,7 +2989,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556482300579840");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3012,7 +3007,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001556482980065402");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3030,7 +3025,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558754002739211");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3048,7 +3043,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558754896121906");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3066,7 +3061,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558756376723547");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3084,7 +3079,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558756431237241");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3102,7 +3097,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558757215588434");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3120,7 +3115,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558757215588434");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3138,7 +3133,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558757911838742");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3156,7 +3151,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558758113153184");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3174,7 +3169,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558760776552510");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3192,7 +3187,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558760776552510");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3210,7 +3205,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558761665732680");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3228,7 +3223,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558764727574558");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3246,7 +3241,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558764727574558");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3264,7 +3259,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558766547902575");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3282,7 +3277,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558766648561756");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3300,7 +3295,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558767625830450");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3318,7 +3313,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558768515043481");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3336,7 +3331,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558769135783960");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3354,7 +3349,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558769513275473");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3372,7 +3367,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558770532503622");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3390,7 +3385,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558772520603699");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3408,7 +3403,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558772856139846");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3426,7 +3421,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558773002936431");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3444,7 +3439,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558775066538015");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3462,7 +3457,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558775188173011");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3480,7 +3475,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558776790397079");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3498,7 +3493,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558778891751424");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3516,7 +3511,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558806838394880");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3534,7 +3529,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558808524488865");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3552,7 +3547,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558808599990282");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3570,7 +3565,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558808893587586");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3588,7 +3583,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558808893587586");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3606,7 +3601,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001558810407731310");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3624,7 +3619,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561216713502720");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3642,7 +3637,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561222673608895");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3660,7 +3655,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561222694576268");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3678,7 +3673,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561223575375963");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3696,7 +3691,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561225508945950");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3714,7 +3709,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561225542504539");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3732,7 +3727,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561227593515099");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3750,7 +3745,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561227627085915");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3768,7 +3763,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561228281385061");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3786,7 +3781,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561230131077201");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3804,7 +3799,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561230240141382");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3822,7 +3817,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561230353383564");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3840,7 +3835,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561231607472198");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3858,7 +3853,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561232651849810");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3876,7 +3871,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561232668643368");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3894,7 +3889,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3912,7 +3907,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561234405068814");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3930,7 +3925,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561238729404506");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3948,7 +3943,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561240923025468");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -3966,7 +3961,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561242177114183");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -4002,7 +3997,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561230240141382");
 
 
                     if (role.isPresent() && author.isPresent()) {
@@ -4110,7 +4105,7 @@ public class Main{
                     Server server = event.getServer().get();
 
                     Optional<User> author = event.getMessageAuthor().asUser();
-                    Optional<Role> role = server.getRoleById("your role ID");
+                    Optional<Role> role = server.getRoleById("1001561226494619648");
 
 
                     if (role.isPresent() && author.isPresent()) {
