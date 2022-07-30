@@ -1,5 +1,3 @@
-package bot;
-
 import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
 import org.javacord.api.entity.message.Message;
@@ -9,14 +7,16 @@ import org.javacord.api.entity.user.User;
 
 import java.util.Optional;
 
-public class Main{
+public class Main {
     public static void main(String[] args) {
-        final String token = "";
-        DiscordApi api = new DiscordApiBuilder()
-                .setToken(token)
-                .login().join();
+        final String token = "MTAwMjA2NTUxNDcxOTM1MDgyNA.G9YieJ.922o0PMG_9_u_U2-M7kgwLoMuI8qQo7B2BNNtk";
+        DiscordApi api = new DiscordApiBuilder().setToken(token).login().join();
 
-        System.out.println("Bot is working and on" + " "+ api.createBotInvite());
+        System.out.println("Bot is working and on" + " " + api.createBotInvite());
+
+
+        api.createAccountUpdater();
+
 
         api.addMessageCreateListener(event -> {
             Message message = event.getMessage();
@@ -27,16 +27,21 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538228437929985");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                         message.addReaction("😃");
 
                     }
                 }
             }
         });
-
 
 
         api.addMessageCreateListener(event -> {
@@ -48,9 +53,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538230249852979");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                         message.addReaction("😃");
 
                     }
@@ -68,9 +79,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538230396661821 ");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                         message.addReaction("😃");
 
                     }
@@ -88,9 +105,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538231629795339");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                         message.addReaction("😃");
 
                     }
@@ -108,9 +131,17 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538231881445476");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
+                        message.addReaction("😃");
+
                     }
                 }
             }
@@ -126,9 +157,22 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538232976150598");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -144,9 +188,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538233030680667");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -162,9 +212,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538233030680667");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -180,9 +236,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538233798238310");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -198,9 +260,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538233999556719");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -216,9 +284,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538235182371017");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -234,9 +308,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538920758124605");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -252,9 +332,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538920774893599");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -270,9 +356,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538922800754758");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -288,9 +380,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538922821714011");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -306,9 +404,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538922851074108");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                         message.addReaction("😃");
                     }
                 }
@@ -325,9 +429,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538924285530192");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -343,9 +453,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538925761941535");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -361,9 +477,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538926105862315");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -379,9 +501,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538927007645726");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -397,9 +525,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538927863271595");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -415,9 +549,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538928240771092");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -433,9 +573,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538929255796767");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -451,9 +597,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001538930463752192");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -469,9 +621,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001540192823414784");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -487,9 +645,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001540193200918689");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -505,9 +669,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001540195847524422");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -523,9 +693,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001540195168030720");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -541,9 +717,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001540195931410432");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -559,9 +741,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001545688598991020");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -577,9 +765,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001545690817765448");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -595,9 +789,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001545692000571603");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -613,9 +813,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001545693317578922");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -631,9 +837,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001545693657309244");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -649,9 +861,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001545695179841617");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -667,9 +885,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001545695616045230");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -685,9 +909,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001545696782078023");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -703,9 +933,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001545696782078023");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -721,9 +957,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001545697537052812");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -739,9 +981,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001545698262651041");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -757,9 +1005,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001545699470622750");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -775,9 +1029,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001545700229791784");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -793,9 +1053,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001545700900880447");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -811,9 +1077,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001545701718773770");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -829,9 +1101,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001545702394056724");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -847,9 +1125,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001545703283236925");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -865,9 +1149,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001545703421644920");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -883,9 +1173,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001545704084340786");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -901,9 +1197,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546892708159549");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -919,9 +1221,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546893282787348");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -937,9 +1245,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546894146797599");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -955,9 +1269,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546895090532362");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -973,9 +1293,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546896650809426");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -991,9 +1317,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546897628078091");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1009,9 +1341,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546898068480060");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1027,9 +1365,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546899385495634");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1045,9 +1389,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546899884621897");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1063,9 +1413,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546900295647375");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1081,9 +1437,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546900484411404");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1099,9 +1461,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546901658812557");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1117,9 +1485,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546903021944862");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1135,9 +1509,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546903760162986");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1153,9 +1533,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546904380903515");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1171,9 +1557,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546905228161094");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1189,9 +1581,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546906062831636");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1207,9 +1605,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546906444513282");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1225,9 +1629,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546907669250209");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1243,9 +1653,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546908369682533");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1261,9 +1677,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546909342773328");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1279,9 +1701,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001546913541263521");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1297,9 +1725,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553338288062495");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1315,9 +1749,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553338904612994");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1333,9 +1773,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553340783677630");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1351,9 +1797,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553341572186142");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1369,9 +1821,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553343103115385");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1387,9 +1845,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553343245721650");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1405,9 +1869,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553345082826812");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1423,9 +1893,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553345275772938");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1441,9 +1917,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553346408239215");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1459,9 +1941,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553347108667412");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1477,9 +1965,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553347272249496");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1495,9 +1989,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553348740259930");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1513,9 +2013,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553349742702693");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1531,9 +2037,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553349767864400");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1549,9 +2061,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553351068090479");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1567,9 +2085,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553351810498650");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1585,9 +2109,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553352565477376");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1603,9 +2133,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553353463050271");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1621,9 +2157,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553355027513355");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1639,9 +2181,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553355702812773");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1657,9 +2205,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553356768157787");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1675,9 +2229,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553356852052020");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1693,9 +2253,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553358278103141");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1711,9 +2277,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553359112777839");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1729,9 +2301,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001553363051237467");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1747,9 +2325,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001554919322562721");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1765,9 +2349,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001554920094314547");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1783,15 +2373,19 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001554919322562721");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
         });
-
-
 
 
         api.addMessageCreateListener(event -> {
@@ -1803,9 +2397,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001554921658781737");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1821,9 +2421,15 @@ public class Main{
                     Optional<User> author = event.getMessageAuthor().asUser();
                     Optional<Role> role = server.getRoleById("1001554922048864436");
 
-
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
             }
@@ -1842,10 +2448,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -1860,10 +2472,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -1878,10 +2496,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -1896,10 +2520,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -1914,10 +2544,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -1932,10 +2568,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -1950,10 +2592,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -1968,10 +2616,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -1986,10 +2640,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2004,10 +2664,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2022,10 +2688,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2040,10 +2712,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2058,10 +2736,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2076,10 +2760,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2094,10 +2784,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2112,10 +2808,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2130,10 +2832,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2148,10 +2856,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2166,10 +2880,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2184,10 +2904,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2202,10 +2928,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2220,10 +2952,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2238,10 +2976,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2256,10 +3000,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2274,10 +3024,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2292,10 +3048,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2310,10 +3072,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2328,10 +3096,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2346,10 +3120,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2364,10 +3144,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2382,10 +3168,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2400,10 +3192,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2418,10 +3216,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2436,10 +3240,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2454,10 +3264,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2472,10 +3288,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2490,10 +3312,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2508,10 +3336,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2526,10 +3360,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2544,10 +3384,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2562,10 +3408,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2580,10 +3432,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2598,10 +3456,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2616,10 +3480,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2634,10 +3504,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2652,10 +3528,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2670,10 +3552,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2688,10 +3576,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2706,10 +3600,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2724,10 +3624,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2742,10 +3648,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2760,10 +3672,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2778,10 +3696,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2796,10 +3720,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2814,10 +3744,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2832,10 +3768,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2850,10 +3792,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2868,10 +3816,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2886,10 +3840,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2904,10 +3864,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2922,10 +3888,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2940,10 +3912,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2958,10 +3936,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2976,10 +3960,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -2994,10 +3984,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3012,10 +4008,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3030,10 +4032,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3048,10 +4056,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3066,10 +4080,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3084,10 +4104,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3102,10 +4128,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3120,10 +4152,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3138,10 +4176,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3156,10 +4200,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3174,10 +4224,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3192,10 +4248,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3210,10 +4272,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3228,10 +4296,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3246,10 +4320,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3264,10 +4344,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3282,10 +4368,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3300,10 +4392,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3318,10 +4416,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3336,10 +4440,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3354,10 +4464,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3372,10 +4488,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3390,10 +4512,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3408,10 +4536,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3426,10 +4560,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3444,10 +4584,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3462,10 +4608,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3480,10 +4632,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3498,10 +4656,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3516,10 +4680,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3534,10 +4704,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3552,10 +4728,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3570,10 +4752,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3588,10 +4776,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3606,10 +4800,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3624,10 +4824,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -3642,10 +4848,16 @@ public class Main{
 
                     if (role.isPresent() && author.isPresent()) {
                         server.addRoleToUser(author.get(), role.get()).join();
+                        message.addReaction("😃");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        message.delete();
                     }
                 }
-            }
-        });
+            }});
 
 
         api.addMessageCreateListener(event -> {
@@ -4114,7 +5326,6 @@ public class Main{
                 }
             }
         });
-
 
 
     }
